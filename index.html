@@ -27,7 +27,7 @@
       background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
     }
 
-    /* ────── NAV ────── */
+    
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 900;
       display: flex; align-items: center; justify-content: space-between;
@@ -54,7 +54,7 @@
     .nav-links a:hover { color: var(--matcha-dk); }
     .nav-links a:hover::after { right: 0; }
 
-    /* lang switcher */
+    
     .lang-switcher { display: flex; gap: 0.3rem; align-items: center; }
     .lang-btn {
       padding: 0.28rem 0.62rem; border: 1px solid rgba(74,124,89,0.3);
@@ -64,7 +64,7 @@
     }
     .lang-btn.active, .lang-btn:hover { background: var(--matcha-dk); color: var(--cream); border-color: var(--matcha-dk); }
 
-    /* hamburger */
+    
     .hamburger {
       display: none; flex-direction: column; justify-content: center; gap: 5px;
       background: none; border: none; cursor: pointer; padding: 4px; width: 32px; height: 32px;
@@ -74,7 +74,7 @@
     .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
     .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-    /* mobile drawer */
+    
     .mobile-menu {
       display: none; position: fixed; inset: 0; z-index: 850;
       background: rgba(248,244,236,0.97); backdrop-filter: blur(18px);
@@ -92,7 +92,7 @@
     .mobile-lang-row .lang-btn { font-size: 0.82rem; padding: 0.45rem 1.1rem; }
     .mobile-divider { width: 40px; height: 1px; background: rgba(74,124,89,0.25); }
 
-    /* ────── HERO ────── */
+    
     #hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; position: relative; overflow: hidden; }
     .hero-text {
       display: flex; flex-direction: column; justify-content: center;
@@ -136,13 +136,13 @@
       animation: slowDrift 12s ease-in-out infinite alternate;
     }
 
-    /* ────── SECTIONS ────── */
+    
     section { padding: 8rem 6rem; }
     .section-label { font-family: var(--ff-title); font-size: 0.75rem; letter-spacing: 0.45em; color: var(--gold); text-transform: uppercase; margin-bottom: 0.8rem; }
     .section-title { font-family: var(--ff-ja); font-weight: 800; font-size: clamp(1.8rem,3vw,2.8rem); color: var(--matcha-dk); letter-spacing: 0.1em; line-height: 1.2; }
     .section-divider { width: 40px; height: 2px; background: var(--gold); margin: 1.6rem 0 2.4rem; }
 
-    /* ────── MENU ────── */
+    
     #menu { background: var(--parchment); }
     .menu-filter { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 3rem; }
     .filter-btn {
@@ -185,7 +185,7 @@
     .temp-hot { border-color: var(--red); color: var(--red); }
     .temp-ice { border-color: #3a6b8b; color: #3a6b8b; }
 
-    /* ────── ACCESS ────── */
+    
     #access { background: var(--matcha-dk); color: var(--cream); }
     #access .section-title { color: var(--cream); }
     #access .section-label { color: var(--gold-lt); }
@@ -201,7 +201,7 @@
     .map-placeholder { height: 380px; overflow: hidden; border: 1px solid rgba(138,184,154,0.2); }
     .map-placeholder iframe { width: 100%; height: 100%; border: none; filter: grayscale(40%) sepia(20%); }
 
-    /* ────── FOOTER ────── */
+    
     footer { background: var(--ink); color: rgba(248,244,236,0.5); padding: 3rem 6rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; }
     .footer-logo { font-family: var(--ff-ja); font-weight: 800; font-size: 1.2rem; color: var(--matcha-lt); letter-spacing: 0.2em; }
     footer p { font-size: 0.72rem; letter-spacing: 0.12em; font-family: var(--ff-en); }
@@ -215,14 +215,14 @@
     .sns-link:hover { border-color: var(--matcha-lt); color: var(--matcha-lt); transform: translateY(-3px); }
     .sns-link svg { width: 18px; height: 18px; fill: currentColor; }
 
-    /* ────── ANIMATIONS ────── */
+    
     @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
     @keyframes pulse { 0%,100% { transform: scale(1); opacity: .12; } 50% { transform: scale(1.15); opacity: .2; } }
     @keyframes slowDrift { from { transform: translate(-50%,-52%) rotate(-1deg); } to { transform: translate(-50%,-48%) rotate(1deg); } }
     .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.9s var(--ease-expo), transform 0.9s var(--ease-expo); }
     .reveal.visible { opacity: 1; transform: translateY(0); }
 
-    /* ────── RESPONSIVE ────── */
+    
     @media (max-width: 900px) {
       nav { padding: 1rem 1.5rem; }
       .nav-links, .lang-switcher { display: none; }
@@ -230,10 +230,12 @@
       .mobile-menu { display: flex; }
       #hero { grid-template-columns: 1fr; }
       .hero-visual { display: none; }
-      .hero-text { padding: 8rem 2rem 4rem; }
-      section { padding: 5rem 2rem; }
+      .hero-text { padding: 8rem 1.5rem 4rem 1.5rem; }
+      section { padding: 5rem 1.5rem; }
+      .menu-filter { gap: 0.4rem; }
+      .filter-btn { padding: 0.45rem 1rem; font-size: 0.74rem; }
       .access-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-      footer { flex-direction: column; gap: 1rem; text-align: center; padding: 2rem; }
+      footer { flex-direction: column; gap: 1rem; text-align: center; padding: 2rem 1.5rem; }
     }
     @media (max-width: 600px) {
       .menu-grid { grid-template-columns: 1fr; }
@@ -242,7 +244,6 @@
 </head>
 <body>
 
-<!-- Mobile drawer -->
 <div class="mobile-menu" id="mobileMenu">
   <a href="#menu"   class="mob-link" data-i18n="nav_menu">メニュー</a>
   <div class="mobile-divider"></div>
@@ -255,7 +256,6 @@
   </div>
 </div>
 
-<!-- Nav -->
 <nav id="nav">
   <a href="#" class="nav-logo">MATCHA VERDE</a>
   <div class="nav-right">
@@ -274,7 +274,6 @@
   </div>
 </nav>
 
-<!-- Hero -->
 <section id="hero">
   <div class="hero-text">
     <p  class="hero-en"    data-i18n="hero_brand">MATCHA VERDE</p>
@@ -287,7 +286,6 @@
   </div>
 </section>
 
-<!-- Menu -->
 <section id="menu">
   <div class="reveal">
     <p  class="section-label" data-i18n="menu_label">Our Menu</p>
@@ -459,7 +457,6 @@
   </div>
 </section>
 
-<!-- Access -->
 <section id="access">
   <div class="reveal">
     <p  class="section-label" data-i18n="acc_label">Access & Hours</p>
@@ -487,14 +484,13 @@
   </div>
 </section>
 
-<!-- Footer -->
 <footer>
   <div class="footer-logo">MATCHA VERDE</div>
   <div class="footer-sns">
-    <a href="https://www.instagram.com/matchaverde_cafecusco/?hl=ja" class="sns-link" aria-label="Instagram" target="_blank" rel="noopener">
+    <a href="#" class="sns-link" aria-label="Instagram" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.308.975.975 1.246 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.975.975-2.242 1.246-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.308-.975-.975-1.246-2.242-1.308-3.608C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.062-1.366.334-2.633 1.308-3.608.975-.975 2.242-1.246 3.608-1.308C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.332.014 7.052.072 5.197.157 3.355.673 2.014 2.014.673 3.355.157 5.197.072 7.052.014 8.332 0 8.741 0 12c0 3.259.014 3.668.072 4.948.085 1.855.601 3.697 1.942 5.038 1.341 1.341 3.183 1.857 5.038 1.942C8.332 23.986 8.741 24 12 24s3.668-.014 4.948-.072c1.855-.085 3.697-.601 5.038-1.942 1.341-1.341 1.857-3.183 1.942-5.038.058-1.28.072-1.689.072-4.948s-.014-3.668-.072-4.948c-.085-1.855-.601-3.697-1.942-5.038C20.645.673 18.803.157 16.948.072 15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
     </a>
-    <a href="https://www.facebook.com/matchaverde.cusco/" class="sns-link" aria-label="Facebook" target="_blank" rel="noopener">
+    <a href="#" class="sns-link" aria-label="Facebook" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.235 2.686.235v2.97h-1.513c-1.491 0-1.956.931-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
     </a>
   </div>
